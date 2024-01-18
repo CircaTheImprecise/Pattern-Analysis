@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value Pattern Analysis Result</title>
+</head>
+<body>
+    <h1>Value Pattern Analysis Result</h1>
+    {% if patterns %}
+        <p>Patterns found:</p>
+        <ul>
+            {% for pattern, is_matched in patterns.items() %}
+                <li>{{ pattern }}: {% if is_matched %} Matched {% else %} Not Matched {% endif %}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No patterns found.</p>
+    {% endif %}
+</body>
+</html>
